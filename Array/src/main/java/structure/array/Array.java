@@ -1,14 +1,29 @@
 package structure.array;
 
 import java.util.Iterator;
+import java.util.function.Consumer;
 
 public class Array <T> implements Iterable <T> {
+
+    public Integer getLength() {
+        return length;
+    }
 
     private final Integer length;
     private T[] array;
 
+    public void setItem(Integer pos, T val) {
+        this.array[pos] = val;
+    }
+
+    public T getItem(Integer pos) {
+        return this.array[pos];
+    }
+
     public Array(Integer length) {
+        if (length < 0) throw new IllegalArgumentException("Negative length: " + length);
         this.length = length;
+        this.array = (T[]) new Object[length];
     }
 
     @Override
@@ -23,9 +38,8 @@ public class Array <T> implements Iterable <T> {
 
             @Override
             public T next() {
-                return Array.this.array[++this.index];
+                return Array.this.array[this.index++];
             }
         };
     }
-
 }
