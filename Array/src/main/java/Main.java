@@ -11,6 +11,8 @@ public class Main {
         for (Integer n: array) {
             System.out.println(n);
         }
+
+        System.out.println(array.getItem(0));
     }
 
 

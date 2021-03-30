@@ -16,7 +16,7 @@ public class Array <T> implements Iterable <T> {
         this.array[pos] = val;
     }
 
-    public T getItem(Integer pos) {
+    public T getItem(@org.jetbrains.annotations.NotNull Integer pos) {
         return this.array[pos];
     }
 
