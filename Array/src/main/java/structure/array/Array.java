@@ -1,12 +1,11 @@
 package structure.array;
 
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 public class Array <T> implements Iterable <T> {
 
     private final Integer length;
+    private T[] array;
 
     public Array(Integer length) {
         this.length = length;
@@ -15,25 +14,18 @@ public class Array <T> implements Iterable <T> {
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
+            private Integer index = 0;
+
             @Override
             public boolean hasNext() {
-                return false;
+                return this.index < Array.this.length;
             }
 
             @Override
             public T next() {
-                return null;
+                return Array.this.array[++this.index];
             }
         };
     }
 
-    @Override
-    public void forEach(Consumer<? super T> action) {
-
-    }
-
-    @Override
-    public Spliterator<T> spliterator() {
-        return null;
-    }
 }
