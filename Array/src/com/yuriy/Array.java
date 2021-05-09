@@ -12,13 +12,9 @@ public class Array {
     }
 
     public void insert(int item) {
-        int[] newData = new int[length + 1];
-        for (int i = 0; i < length; i++) {
-            newData[i] = data[i];
-        }
-        newData[length] = item;
-        length++;
-        data = newData;
+        if (currentIndex == length)
+            extendArray();
+        data[currentIndex++] = item;
     }
 
     private void extendArray() {
@@ -48,5 +44,7 @@ public class Array {
         }
         System.out.println();
     }
+
+
 
 }
