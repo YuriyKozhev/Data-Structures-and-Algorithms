@@ -7,6 +7,9 @@ public class Main {
         array.insert(1);
         array.print();
         array.insert(2);
+        array.insert(3);
+        array.insert(4);
+        array.insert(5);
         array.print();
         array.removeAt(1);
         array.print();
