@@ -23,8 +23,9 @@ public class Array {
         for (int i = 0; i < index; i++) {
             newData[i] = data[i];
         }
-        if (data.length - index + 1 >= 0)
-            System.arraycopy(data, index + 1, newData, index + 1 - 1, data.length - index + 1);
+        for (int i = index + 1; i < data.length; i++) {
+            newData[i - 1] = data[i];
+        }
         data = newData;
     }
 
