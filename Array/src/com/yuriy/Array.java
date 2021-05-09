@@ -26,6 +26,7 @@ public class Array {
             newData[i - 1] = data[i];
         }
         data = newData;
+        currentIndex--;
     }
 
     public void print() {
