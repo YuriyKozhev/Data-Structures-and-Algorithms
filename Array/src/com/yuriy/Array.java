@@ -10,8 +10,11 @@ public class Array {
     }
 
     public void insert(int item) {
-        data = new int[length + 1];
-        data[length] = item;
+        int[] newData = new int[length + 1];
+        for (int i = 0; i < length; i++) {
+            newData[i] = data[i];
+        }
+        newData[length] = item;
         length++;
     }
 
