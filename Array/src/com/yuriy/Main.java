@@ -13,5 +13,7 @@ public class Main {
         array.print();
         array.removeAt(1);
         array.print();
+        System.out.println(array.indexOf(4));
+        System.out.println(array.indexOf(2));
     }
 }
