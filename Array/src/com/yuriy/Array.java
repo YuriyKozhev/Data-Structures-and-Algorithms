@@ -30,9 +30,8 @@ public class Array {
     }
 
     public void print() {
-        for (var item :
-                data) {
-            System.out.print(item + " ");
+        for (int i = 0; i < currentIndex; i++) {
+            System.out.print(data[i] + " ");
         }
         System.out.println();
     }
