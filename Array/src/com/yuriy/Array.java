@@ -21,6 +21,15 @@ public class Array {
         data = newData;
     }
 
+    private void extendArray() {
+        int[] newData = new int[length + 1];
+        for (int i = 0; i < length; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
+        length++;
+    }
+
     public void removeAt(int index) {
         int[] newData = new int[--length];
         for (int i = 0; i < index; i++) {
