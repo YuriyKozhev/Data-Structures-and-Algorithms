@@ -45,6 +45,12 @@ public class Array {
         length++;
     }
 
-
+    public int indexOf(int item) {
+        for (int i = 0; i < length; i++) {
+            if (data[i] == item)
+                return i;
+        }
+        return -1;
+    }
 
 }
