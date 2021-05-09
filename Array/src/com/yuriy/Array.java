@@ -3,10 +3,12 @@ package com.yuriy;
 public class Array {
     private int[] data;
     private int length;
+    private int currentIndex;
 
     public Array(int length) {
         this.length = length;
         data = new int[length];
+        currentIndex = 0;
     }
 
     public void insert(int item) {
