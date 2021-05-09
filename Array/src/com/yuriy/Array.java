@@ -16,6 +16,7 @@ public class Array {
         }
         newData[length] = item;
         length++;
+        data = newData;
     }
 
     public void removeAt(int index) {
@@ -27,6 +28,14 @@ public class Array {
             newData[i - 1] = data[i];
         }
         data = newData;
+    }
+
+    public void print() {
+        for (var item :
+                data) {
+            System.out.print(item + " ");
+        }
+        System.out.println();
     }
 
 }
