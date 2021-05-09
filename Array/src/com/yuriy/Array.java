@@ -35,7 +35,7 @@ public class Array {
     }
 
     private void extendArray() {
-        int[] newData = new int[data.length + 1];
+        int[] newData = new int[data.length * 2];
         for (int i = 0; i < data.length; i++) {
             newData[i] = data[i];
         }
