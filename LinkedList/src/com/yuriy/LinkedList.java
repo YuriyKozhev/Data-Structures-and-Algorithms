@@ -1,5 +1,7 @@
 package com.yuriy;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList {
     private class Node {
         private int value;
@@ -50,7 +52,7 @@ public class LinkedList {
 
     public void deleteFirst() {
         if (isEmpty())
-            return;
+            throw new NoSuchElementException();
 
         // List contains exactly 1 element
         if (first == last) {
@@ -65,7 +67,7 @@ public class LinkedList {
 
     public void deleteLast() {
         if (isEmpty())
-            return;
+            throw new NoSuchElementException();
 
         // List contains exactly 1 element
         if (first == last) {
