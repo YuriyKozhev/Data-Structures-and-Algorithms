@@ -16,6 +16,8 @@ public class Array {
     }
 
     public void removeAt(int index) {
+        if (index < 0 || index >= currentIndex)
+            throw new IllegalArgumentException("Incorrect index");
         for (int i = index; i < data.length - 1; i++)
             data[i] = data[i + 1];
         currentIndex--;
