@@ -51,6 +51,13 @@ public class LinkedList {
     public void deleteFirst() {
         if (isEmpty())
             return;
+
+        // List contains exactly 1 element
+        if (first == last) {
+            first = last = null;
+            return;
+        }
+
         Node newFirst = first.next;
         first = null; // remove link to deleted Node
         first = newFirst;
