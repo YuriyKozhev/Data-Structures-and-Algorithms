@@ -1,5 +1,7 @@
 package com.yuriy;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,5 +19,6 @@ public class Main {
         System.out.println(list.indexOf(5));
         System.out.println(list.indexOf(0));
         System.out.println(list.size());
+        System.out.println(Arrays.toString(list.toArray()));
     }
 }

@@ -111,6 +111,18 @@ public class LinkedList {
         return size;
     }
 
+    public int[] toArray() {
+        int[] array = new int[size];
+        var current = first;
+        int i = 0;
+        while (current != null) {
+            array[i] = current.value;
+            current = current.next;
+            i++;
+        }
+        return array;
+    }
+
     private boolean isEmpty() {
         return first == null;
     }
