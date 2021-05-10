@@ -8,6 +8,7 @@ public class Main {
         list.addFirst(20);
         list.addLast(5);
         list.addLast(1);
+        System.out.println(list.size());
         list.deleteFirst();
         list.deleteLast();
         System.out.println(list);
@@ -15,5 +16,6 @@ public class Main {
         System.out.println(list.contains(0));
         System.out.println(list.indexOf(5));
         System.out.println(list.indexOf(0));
+        System.out.println(list.size());
     }
 }

@@ -20,9 +20,11 @@ public class LinkedList {
 
     private Node first;
     private Node last;
+    private int size;
 
     public LinkedList() {
         first = last = null;
+        size = 0;
     }
 
     public void addFirst(int value) {
@@ -30,6 +32,7 @@ public class LinkedList {
             first = last = new Node(value);
         else
             first = new Node(value, first);
+        size++;
     }
 
     @Override
@@ -48,6 +51,7 @@ public class LinkedList {
     public void addLast(int value) {
         last.next = new Node(value);
         last = last.next;
+        size++;
     }
 
     public void deleteFirst() {
@@ -57,12 +61,14 @@ public class LinkedList {
         // List contains exactly 1 element
         if (first == last) {
             first = last = null;
+            size--;
             return;
         }
 
         Node newFirst = first.next;
         first = null; // remove link to deleted Node
         first = newFirst;
+        size--;
     }
 
     public void deleteLast() {
@@ -72,6 +78,7 @@ public class LinkedList {
         // List contains exactly 1 element
         if (first == last) {
             first = last = null;
+            size--;
             return;
         }
 
@@ -81,6 +88,7 @@ public class LinkedList {
 
         secondToLast.next = null; // remove link to deleted Node
         last = secondToLast;
+        size--;
     }
 
     public boolean contains(int value) {
@@ -97,6 +105,10 @@ public class LinkedList {
             i++;
         }
         return -1;
+    }
+
+    public int size() {
+        return size;
     }
 
     private boolean isEmpty() {
