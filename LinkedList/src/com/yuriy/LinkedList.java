@@ -27,7 +27,13 @@ public class LinkedList {
         return s;
     }
 
-    // addLast
+    public void addLast(int value) {
+        last.setValue(value);
+        Node newLast = new Node(0, null);
+        last.setNext(newLast);
+        last = newLast;
+    }
+
     // deleteFirst
     // deleteLast
     // contains
