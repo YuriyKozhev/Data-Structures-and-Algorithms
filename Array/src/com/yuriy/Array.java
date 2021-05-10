@@ -39,7 +39,7 @@ public class Array {
     }
 
     public int indexOf(int item) {
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < currentIndex; i++) {
             if (data[i] == item)
                 return i;
         }
