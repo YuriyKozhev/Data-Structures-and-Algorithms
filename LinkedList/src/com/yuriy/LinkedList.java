@@ -49,8 +49,11 @@ public class LinkedList {
     }
 
     public void deleteFirst() {
-//        first = first.next;
-//        first.value = 0;
+        if (isEmpty())
+            return;
+        Node newFirst = first.next;
+        first = null; // remove link to deleted Node
+        first = newFirst;
     }
 
     public void deleteLast() {
