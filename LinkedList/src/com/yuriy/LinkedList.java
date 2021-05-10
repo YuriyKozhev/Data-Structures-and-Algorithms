@@ -75,24 +75,18 @@ public class LinkedList {
     }
 
     public boolean contains(int value) {
-//        Node current = first.next;
-//        while (current != last) {
-//            if (current.value == value)
-//                return true;
-//            current = current.next;
-//        }
-        return false;
+        return indexOf(value) != -1;
     }
 
     public int indexOf(int value) {
-//        Node current = first.next;
-//        int i = 0;
-//        while (current != last) {
-//            if (current.value == value)
-//                return i;
-//            current = current.next;
-//            i++;
-//        }
+        Node current = first;
+        int i = 0;
+        while (current != null) {
+            if (current.value == value)
+                return i;
+            current = current.next;
+            i++;
+        }
         return -1;
     }
 
