@@ -16,14 +16,8 @@ public class Array {
     }
 
     public void removeAt(int index) {
-        int[] newData = new int[data.length - 1];
-        for (int i = 0; i < index; i++) {
-            newData[i] = data[i];
-        }
-        for (int i = index + 1; i < data.length; i++) {
-            newData[i - 1] = data[i];
-        }
-        data = newData;
+        for (int i = index; i < data.length - 1; i++)
+            data[i] = data[i + 1];
         currentIndex--;
     }
 
