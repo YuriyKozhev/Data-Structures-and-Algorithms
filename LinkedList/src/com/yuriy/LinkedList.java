@@ -34,7 +34,10 @@ public class LinkedList {
         last = newLast;
     }
 
-    // deleteFirst
+    public void deleteFirst() {
+        first = first.getNext();
+        first.setValue(0);
+    }
 
     public void deleteLast() {
         Node secondToLast = first.getNext();
