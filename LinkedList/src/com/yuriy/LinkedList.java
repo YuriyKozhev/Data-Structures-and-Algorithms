@@ -44,10 +44,8 @@ public class LinkedList {
     }
 
     public void addLast(int value) {
-//        last.value = value;
-//        Node newLast = new Node(0, null);
-//        last.next = newLast;
-//        last = newLast;
+        last.next = new Node(value);
+        last = last.next;
     }
 
     public void deleteFirst() {
