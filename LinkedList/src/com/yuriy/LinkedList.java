@@ -58,5 +58,15 @@ public class LinkedList {
         return false;
     }
 
-    // indexOf
+    public int indexOf(int value) {
+        Node current = first.getNext();
+        int i = 0;
+        while (current != last) {
+            if (current.getValue() == value)
+                return i;
+            current = current.getNext();
+            i++;
+        }
+        return -1;
+    }
 }
