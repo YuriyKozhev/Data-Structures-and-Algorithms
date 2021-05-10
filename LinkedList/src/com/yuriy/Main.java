@@ -7,6 +7,7 @@ public class Main {
         list.addFirst(10);
         list.addFirst(20);
         list.addLast(5);
+        list.deleteLast();
         System.out.println(list);
     }
 }

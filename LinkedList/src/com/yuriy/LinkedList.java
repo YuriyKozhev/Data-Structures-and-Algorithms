@@ -35,7 +35,15 @@ public class LinkedList {
     }
 
     // deleteFirst
-    // deleteLast
+
+    public void deleteLast() {
+        Node secondToLast = first.getNext();
+        while (secondToLast.getNext() != last)
+            secondToLast = secondToLast.getNext();
+        secondToLast.setNext(null);
+        secondToLast.setValue(0);
+        last = secondToLast;
+    }
     // contains
     // indexOf
 }
