@@ -57,12 +57,21 @@ public class LinkedList {
     }
 
     public void deleteLast() {
-//        Node secondToLast = first.next;
-//        while (secondToLast.next != last)
-//            secondToLast = secondToLast.next;
-//        secondToLast.next = null;
-//        secondToLast.value = 0;
-//        last = secondToLast;
+        if (isEmpty())
+            return;
+
+        // List contains exactly 1 element
+        if (first == last) {
+            first = last = null;
+            return;
+        }
+
+        Node secondToLast = first.next;
+        while (secondToLast.next != last)
+            secondToLast = secondToLast.next;
+
+        secondToLast.next = null; // remove link to deleted Node
+        last = secondToLast;
     }
 
     public boolean contains(int value) {
