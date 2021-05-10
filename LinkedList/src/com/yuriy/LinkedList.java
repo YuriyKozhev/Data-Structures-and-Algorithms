@@ -47,6 +47,16 @@ public class LinkedList {
         secondToLast.setValue(0);
         last = secondToLast;
     }
-    // contains
+
+    public boolean contains(int value) {
+        Node current = first.getNext();
+        while (current != last) {
+            if (current.getValue() == value)
+                return true;
+            current = current.getNext();
+        }
+        return false;
+    }
+
     // indexOf
 }
