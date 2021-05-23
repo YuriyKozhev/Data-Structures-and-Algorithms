@@ -59,16 +59,14 @@ public class LinkedList {
         if (isEmpty())
             throw new NoSuchElementException();
 
-        // List contains exactly 1 element
-        if (first == last) {
-            first = last = null;
-            size--;
-            return;
+        if (size != 1) {
+            Node newFirst = first.next;
+            first = null; // remove link to deleted Node
+            first = newFirst;
         }
-
-        Node newFirst = first.next;
-        first = null; // remove link to deleted Node
-        first = newFirst;
+        else {
+            first = last = null;
+        }
         size--;
     }
 
