@@ -50,8 +50,12 @@ public class LinkedList {
     }
 
     public void addLast(int value) {
-        last.next = new Node(value);
-        last = last.next;
+        if (isEmpty())
+            first = last = new Node(value);
+        else {
+            last.next = new Node(value);
+            last = last.next;
+        }
         size++;
     }
 
