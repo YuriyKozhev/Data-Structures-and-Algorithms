@@ -92,6 +92,13 @@ public class LinkedList {
         size--;
     }
 
+    private Node getPrevious(Node current) {
+        Node previous = first.next;
+        while (previous.next != current)
+            previous = previous.next;
+        return previous;
+    }
+
     public boolean contains(int value) {
         return indexOf(value) != -1;
     }
