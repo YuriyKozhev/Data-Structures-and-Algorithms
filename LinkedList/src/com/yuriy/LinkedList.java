@@ -169,5 +169,20 @@ public class LinkedList {
         }
         last = first;
         first = current;
+   }
+
+    public int getKthFromTheEnd(int k) {
+        Node firstNode = first;
+        Node secondNode = first;
+
+        for (int i = 0; i < k; i++)
+            secondNode = secondNode.next;
+
+        while (secondNode != null) {
+            firstNode = firstNode.next;
+            secondNode = secondNode.next;
+        }
+
+        return firstNode.value;
     }
 }
