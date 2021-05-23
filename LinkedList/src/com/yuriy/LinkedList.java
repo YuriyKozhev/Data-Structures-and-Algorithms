@@ -79,10 +79,7 @@ public class LinkedList {
             throw new NoSuchElementException();
 
         if (size != 1) {
-            Node secondToLast = first.next;
-            while (secondToLast.next != last)
-                secondToLast = secondToLast.next;
-
+            Node secondToLast = getPrevious(last);
             secondToLast.next = null; // remove link to deleted Node
             last = secondToLast;
         }
