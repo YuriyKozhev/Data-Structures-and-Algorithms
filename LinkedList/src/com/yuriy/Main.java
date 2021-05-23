@@ -13,5 +13,9 @@ public class Main {
         System.out.println(list);
         list.reverse();
         System.out.println(list);
+        list.reverseAnotherApproach();
+        System.out.println(list);
+        list.reverse();
+        System.out.println(list);
     }
 }

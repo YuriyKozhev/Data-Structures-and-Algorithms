@@ -151,4 +151,23 @@ public class LinkedList {
         last.next = null;
         first = previousNode;
     }
+
+    public void reverseAnotherApproach() {
+        Node current = first;
+
+        Node afterLast;
+        Node nextNode;
+        while(current != last) {
+            afterLast = last.next;
+            nextNode = current.next;
+
+            last.next = current;
+
+            current.next = afterLast;
+
+            current = nextNode;
+        }
+        last = first;
+        first = current;
+    }
 }
