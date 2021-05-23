@@ -22,6 +22,13 @@ public class LinkedList {
     private Node last;
     private int size;
 
+    private Node getPrevious(Node current) {
+        Node previous = first.next;
+        while (previous.next != current)
+            previous = previous.next;
+        return previous;
+    }
+
     public LinkedList() {
         first = last = null;
         size = 0;
@@ -87,13 +94,6 @@ public class LinkedList {
             first = last = null;
         }
         size--;
-    }
-
-    private Node getPrevious(Node current) {
-        Node previous = first.next;
-        while (previous.next != current)
-            previous = previous.next;
-        return previous;
     }
 
     public boolean contains(int value) {
