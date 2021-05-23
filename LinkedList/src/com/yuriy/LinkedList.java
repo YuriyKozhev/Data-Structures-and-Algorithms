@@ -37,15 +37,16 @@ public class LinkedList {
 
     @Override
     public String toString() {
-        String s = "[";
+        StringBuilder output = new StringBuilder("[");
         Node current = first;
         while (current != null) {
-            s += current.value;
-            s += ", ";
+            output.append(current.value);
+            output.append(", ");
             current = current.next;
         }
-        s += "]";
-        return s;
+        output.delete(output.length() - 2,output.length()); // delete extra ", "
+        output.append("]");
+        return output.toString();
     }
 
     public void addLast(int value) {
