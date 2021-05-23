@@ -124,6 +124,6 @@ public class LinkedList {
     }
 
     private boolean isEmpty() {
-        return first == null;
+        return size == 0;
     }
 }
