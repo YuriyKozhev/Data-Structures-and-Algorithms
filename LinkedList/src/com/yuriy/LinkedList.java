@@ -172,15 +172,21 @@ public class LinkedList {
    }
 
     public int getKthFromTheEnd(int k) {
+        if (isEmpty())
+            throw new IllegalStateException();
+
         Node firstNode = first;
         Node secondNode = first;
 
-        for (int i = 0; i < k; i++)
-            secondNode = secondNode.next;
+       for (int i = 0; i < k; i++) {
+            if (secondNode == null)
+                throw new IllegalArgumentException();
+           secondNode = secondNode.next;
+       }
 
         while (secondNode != null) {
-            firstNode = firstNode.next;
-            secondNode = secondNode.next;
+           firstNode = firstNode.next;
+           secondNode = secondNode.next;
         }
 
         return firstNode.value;
