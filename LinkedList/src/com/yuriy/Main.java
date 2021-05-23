@@ -10,15 +10,8 @@ public class Main {
         list.addFirst(20);
         list.addLast(5);
         list.addLast(1);
-        System.out.println(list.size());
-        list.deleteFirst();
-        list.deleteLast();
         System.out.println(list);
-        System.out.println(list.contains(10));
-        System.out.println(list.contains(0));
-        System.out.println(list.indexOf(5));
-        System.out.println(list.indexOf(0));
-        System.out.println(list.size());
-        System.out.println(Arrays.toString(list.toArray()));
+        list.reverse();
+        System.out.println(list);
     }
 }

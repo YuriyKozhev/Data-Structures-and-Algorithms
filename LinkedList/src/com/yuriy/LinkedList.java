@@ -131,4 +131,24 @@ public class LinkedList {
     public boolean isEmpty() {
         return size == 0;
     }
+
+    public void reverse() {
+        if (isEmpty() || size == 1)
+            return;
+
+        Node previousNode = first;
+        Node current = first.next;
+        Node nextNode;
+        while (current != null) {
+            nextNode = current.next;
+
+            current.next = previousNode;
+
+            previousNode = current;
+            current = nextNode;
+        }
+        last = first;
+        last.next = null;
+        first = previousNode;
+    }
 }
