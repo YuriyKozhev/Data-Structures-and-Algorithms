@@ -27,7 +27,7 @@ public class ArrayImplementedStack {
     }
 
     public boolean isEmpty() {
-        return true;
+        return pointer == 0;
     }
 
     @Override
