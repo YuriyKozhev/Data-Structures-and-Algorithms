@@ -33,7 +33,7 @@ public class ArrayImplementedStack {
     @Override
     public String toString() {
         return "ArrayImplementedStack{" +
-                "data=" + Arrays.toString(data) +
+                "data=" + Arrays.toString(Arrays.copyOfRange(data,0,pointer)) +
                 '}';
     }
 
