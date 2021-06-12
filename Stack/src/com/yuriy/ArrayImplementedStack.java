@@ -1,5 +1,7 @@
 package com.yuriy;
 
+import java.util.Arrays;
+
 public class ArrayImplementedStack {
     private int[] data;
     private int pointer;
@@ -23,5 +25,20 @@ public class ArrayImplementedStack {
 
     public boolean isEmpty() {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "ArrayImplementedStack{" +
+                "data=" + Arrays.toString(data) +
+                '}';
+    }
+
+    private boolean isFull() {
+        return !(pointer < data.length);
+    }
+
+    private void resize() {
+       data = Arrays.copyOf(data,data.length * 2 + 1);
     }
 }
