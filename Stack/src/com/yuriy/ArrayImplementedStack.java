@@ -1,8 +1,12 @@
 package com.yuriy;
 
 public class ArrayImplementedStack {
-    public ArrayImplementedStack() {
+    private int[] data;
+    private int pointer;
 
+    public ArrayImplementedStack() {
+        data = new int[0];
+        pointer = 0;
     }
 
     public void push(int val) {
