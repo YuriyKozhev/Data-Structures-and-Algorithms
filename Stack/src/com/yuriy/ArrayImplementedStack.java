@@ -27,6 +27,9 @@ public class ArrayImplementedStack {
     }
 
     public int peek() {
+        if (isEmpty())
+            throw new EmptyStackException();
+
         return data[pointer - 1];
     }
 
