@@ -1,6 +1,7 @@
 package com.yuriy;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class ArrayImplementedStack {
     private int[] data;
@@ -19,7 +20,10 @@ public class ArrayImplementedStack {
     }
 
     public int pop() {
-        return 0;
+        if (isEmpty())
+            throw new EmptyStackException();
+
+        return data[--pointer];
     }
 
     public int peek() {
