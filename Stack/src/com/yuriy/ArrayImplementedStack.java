@@ -12,7 +12,10 @@ public class ArrayImplementedStack {
     }
 
     public void push(int val) {
+        if (isFull())
+            resize();
 
+        data[pointer++] = val;
     }
 
     public int pop() {
