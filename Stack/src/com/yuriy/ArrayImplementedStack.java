@@ -27,7 +27,7 @@ public class ArrayImplementedStack {
     }
 
     public int peek() {
-        return 0;
+        return data[pointer - 1];
     }
 
     public boolean isEmpty() {
